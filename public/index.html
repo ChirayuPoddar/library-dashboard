@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Library Management Dashboard</h1>
+        <div class="badge">Available Books: 0</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="stat-card">
+            <h4>Total Books</h4>
+            <p class="totalBooks">0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Total Members</h4>
+            <p class="totalMem">0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Books Borrowed</h4>
+            <p class="booksBorrowed">0</p>
+        </div>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <!-- QUICK ACTIONS -->
+        <div class="card quickActions">
+            <h2>⚡ Quick Actions</h2>
+
+            <div class="group">
+                <label>Manage Member</label>
+                <input class="addMember" placeholder="Member Name">
+                <button class="addMemberbtn">Add Member</button>
+                <button class="delMemberbtn">Delete Member</button>
+            </div>
+
+            <div class="group">
+                <label>Add Book</label>
+                <input class="addBookName" placeholder="Book Name">
+                <input class="addBookqty" placeholder="Quantity">
+                <button class="addBookbtn">Add Book</button>
+            </div>
+
+            <div class="group">
+                <label>Manage Book</label>
+                <input class="borrowMemName" placeholder="Member">
+                <input class="borrowBookName" placeholder="Book">
+                <button class="borrowBtn">Borrow</button>
+                <button class="returnBtn">Return</button>
+            </div>
+        </div>
+
+        <!-- BOOKS -->
+        <div class="card books">
+            <h2>📘 Books</h2>
+            <div class="scroll">
+                <ul class="list bookList"></ul>
+            </div>
+        </div>
+
+        <!-- MEMBERS -->
+        <div class="card members">
+            <h2>👤 Members</h2>
+            <div class="scroll">
+                <ul class="list memberList"></ul>
+            </div>
+        </div>
+
+        <!-- BORROWED LIST -->
+        <div class="card borrowedList">
+            <h2>📄 Borrowed List</h2>
+
+            <div class="headerRow">
+                <span>Member</span>
+                <span>Book</span>
+                <span>Date</span>
+            </div>
+
+            <div class="borrowscroll">
+                <ul class="list borrowedLists"></ul>
+            </div>
+        </div>
+
+        <!-- MEMBER ACTIVITY -->
+        <div class="card memberActivity">
+            <h2>📊 Member Activity</h2>
+            <div class="scrollActivity"></div>
+        </div>
+
+        <!-- SYSTEM MESSAGES -->
+        <div class="card show">
+            <h2>💬 System Messages</h2>
+            <div class="systemMsg"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
